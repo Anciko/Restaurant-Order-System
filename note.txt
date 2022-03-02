@@ -1,0 +1,42 @@
+Restaurant order system
+ -Kitchen panel
+    -Food panel
+        -Dish
+        -Category
+    -Approve
+    -Done
+
+-Waiter panel
+    -Order panel
+        -Table
+        -Dish
+    -Order -> ready -> table serve
+
+
+Users                   Dishes                      Categories
+======                  ======                      ========
+id                      id                          id
+name                    name                        name
+email                   category_id                 created_at
+password                created_at                  updated_at
+created_at              updated_at
+updated_at
+
+
+tables                  orders
+======                  ======
+id                      id
+number                  order_id
+created_at              dish_id
+updated_at              table_id
+                        status
+                        created_at
+                        updated_at
+
+
+
+status => 1 - new
+          2 - processing
+          3 - cancel
+          4 - ready
+          5 - done
